@@ -366,6 +366,284 @@ body {
     font-weight: 700;
 }
 
+/* Results Section */
+.results {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.result-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+}
+
+.result-images {
+    position: relative;
+    padding-top: 75%;
+    overflow: hidden;
+}
+
+.result-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.result-images .after {
+    opacity: 0;
+}
+
+.result-images:hover .after {
+    opacity: 1;
+}
+
+.result-images:hover .before {
+    opacity: 0;
+}
+
+.result-card p {
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--text);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.testimonials-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px;
+}
+
+.testimonial-content {
+    position: relative;
+    padding-left: 40px;
+}
+
+.testimonial-content i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px;
+    opacity: 0.5;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.author-info p {
+    margin: 5px 0 0;
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+.testimonials-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.testimonials-nav button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.testimonials-nav button:hover {
+    background: white;
+    color: var(--primary);
+}
+
+/* Prices Section */
+.prices {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.prices h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.prices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.price-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.price-card h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.price-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.price-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.price-list li:last-child {
+    border-bottom: none;
+}
+
+.zone {
+    color: var(--text);
+}
+
+.price {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Appointment Section */
+.appointment {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+}
+
+.appointment-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.appointment-info h2 {
+    margin-bottom: 20px;
+}
+
+.appointment-features {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.appointment-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.appointment-features i {
+    margin-right: 10px;
+    color: #2ecc71;
+}
+
+.appointment-form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
 /* Footer */
 .footer {
     background: var(--secondary);
@@ -450,6 +728,24 @@ body {
 
     .promo-text {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .appointment-content {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-form {
+        padding: 20px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prices-grid {
+        grid-template-columns: 1fr;
     }
 }
 
